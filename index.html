@@ -1,53 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cat Adoption Agency</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Cat Breeds</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <h1>Happy Paws Cat Adoption</h1>
-    <p class="tagline">Find your purrfect companion</p>
-  </header>
-
-  <main>
-    <section class="cat-container" aria-label="Cat breeds">
-      <!-- Cards injected by the script below -->
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Happy Paws Cat Adoption</p>
-  </footer>
-
-  <script>
-    // Keep filenames exactly as they appear in my images folder
-    const cats = [
-      { file: 'images/siamese.jpg.jpeg', name: 'Siamese', desc: 'Affectionate, vocal, and intelligent.' },
-      { file: 'images/maine-coon.jpg.jpeg', name: 'Maine Coon', desc: 'Large, gentle, and friendly.' },
-      { file: 'images/bengal.jpg.jpeg', name: 'Bengal', desc: 'Energetic and playful with a striking coat.' },
-      { file: 'images/persian.jpg.jpeg', name: 'Persian', desc: 'Calm and affectionate; prefers a relaxed home.' }
-    ];
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const container = document.querySelector('.cat-container');
-
-      cats.forEach(cat => {
-        const article = document.createElement('article');
-        article.className = 'cat-breed';
-        article.innerHTML = `
-          <img src="${cat.file}" alt="${cat.name} cat" loading="lazy" />
-          <h3>${cat.name}</h3>
-          <p>${cat.desc}</p>
-          <a class="cta" href="${cat.name.toLowerCase().replace(/\s+/g,'-')}.html">Learn more</a>
-        `;
-        container.appendChild(article);
-      });
-
-      document.getElementById('year').textContent = new Date().getFullYear();
-    });
-  </script>
+    <div class="cat-container">
+        <div class="cat-breed">
+            <img src="https://images.freeimages.com/images/large-previews/4bd/black-cat-1383472.jpg" alt="Breed 1">
+            <h3>Breed 1</h3>
+            <p>This is a brief description of Breed 1.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="cat-breed">
+            <img src="https://images.freeimages.com/images/large-previews/f19/maine-coon-cat-1542262.jpg" alt="Breed 2">
+            <h3>Breed 2</h3>
+            <p>This is a brief description of Breed 2.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="cat-breed">
+            <img src="https://images.freeimages.com/images/large-previews/bd1/cat-1404368.jpg" alt="Breed 3">
+            <h3>Breed 3</h3>
+            <p>This is a brief description of Breed 3.</p>
+            <a href="#">Learn More</a>
+        </div>
+    </div>
 </body>
 </html>
